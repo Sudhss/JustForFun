@@ -2,7 +2,28 @@
 using namespace std;
 
 void printA(){
-    cout << "Printing A";
+    //     **    
+    //    *  *   
+    //   ******  
+    //  *      * 
+    // *        *
+    int n = 5;
+    int mid = n/2;
+    for(int i = 0;i<n;i++){
+        for(int j = 0;j<n-i-1;j++){
+            cout << " ";
+        }
+        cout << "*";
+        
+        for(int j = 0;j<i*2;j++){
+            if(i == mid){
+                cout << "*";
+            }
+            else cout << " ";
+        }
+        cout << "*";
+        cout << endl;
+    }
 }
 void printB(){
     cout << "Printing B";
@@ -17,8 +38,10 @@ void printD(){
 int main(){
     while(true){
         cout << "\nEnter your choice : ";
-        char ch; cin >> ch;
+        string inp; cin >> inp;
+        char ch = inp[0];
         ch = toupper(ch);
+        inp.clear();
         if(ch < 'A' || ch > 'Z') {cout << "\nInavalid Choice"; continue;}
         switch (ch){
             case 'A':
@@ -37,7 +60,9 @@ int main(){
         }
 
         cout << "\nDo you want to continue (Y/N) : ";
-        char choice;cin >> choice;
+        string inp2; cin >> inp2;
+        char choice = inp2[0];
+        inp.clear();
         if(choice == 'Y' || choice == 'y') continue;
         else if(choice == 'N' || choice == 'n'){
             cout << "\nGood Bye !";

@@ -1,13 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+int n = 5;
 void printA(){
 //     **    
 //    *  *   
 //   ******  
 //  *      * 
 // *        *
-    int n = 10;
     int mid = n/2;
     for(int i = 0;i<n;i++){
         for(int j = 0;j<n-i-1;j++){
@@ -31,7 +30,6 @@ void printB(){
     // ********  
     // *       * 
     // ******** 
-    int n = 7;
     int mid = n/2;
     for(int i = 0;i<n;i++){
         cout << "*";
@@ -52,7 +50,6 @@ void printC(){
     // *
     // *
     // *****
-    int n = 5;
     for(int i = 0;i<n;i++){
         cout  << "*";
         if(i == 0 || i == n-1){
@@ -64,6 +61,29 @@ void printC(){
     }
 }
 
+void printD(){
+    // ***** 
+    // *    *
+    // *    *
+    // *    *
+    // ***** 
+    int n = 5;
+    for(int i = 0;i<n;i++){
+        cout << "*";
+        for(int j = 0;j<n-1;j++){
+            if(i == 0 || i == n-1) cout << "*";
+            else { 
+                if(j == n-2) cout << " *";
+                else cout << " ";
+            }
+        }
+        
+        cout <<  endl;
+    }
+}
+
+
+
 int main(){
-    printC();
+    printD();
 }

@@ -91,9 +91,60 @@ void printE(){
     // ****
     // *
     // ******
+    int n = 5;
+    int mid = n/2;
+    for(int i = 0;i<n;i++){
+        cout << "*";
+        for(int j = 0;j<n-1;j++){
+            if(i == 0 || i == n-1) cout << "*";
+            else{
+                if(i == mid && j != n-2) cout << "*";
+            }
+        }
+        cout << endl;
+    }
     
 }
-
+void printF(){    
+    // ******
+    // *
+    // ****
+    // *
+    // *
+    int n = 5;
+    int mid = n/2;
+    for(int i = 0;i<n;i++){
+        cout << "*";
+        for(int j = 0;j<n-1;j++){
+            if(i == 0) cout << "*";
+            else{
+                if(i == mid && j != n-2) cout << "*";
+            }
+        }
+        cout << endl;
+    }
+    
+}
+void printG(){ cout << "G\n"; }
+void printH(){ cout << "H\n"; }
+void printI(){ cout << "I\n"; }
+void printJ(){ cout << "J\n"; }
+void printK(){ cout << "K\n"; }
+void printL(){ cout << "L\n"; }
+void printM(){ cout << "M\n"; }
+void printN(){ cout << "N\n"; }
+void printO(){ cout << "O\n"; }
+void printP(){ cout << "P\n"; }
+void printQ(){ cout << "Q\n"; }
+void printR(){ cout << "R\n"; }
+void printS(){ cout << "S\n"; }
+void printT(){ cout << "T\n"; }
+void printU(){ cout << "U\n"; }
+void printV(){ cout << "V\n"; }
+void printW(){ cout << "W\n"; }
+void printX(){ cout << "X\n"; }
+void printY(){ cout << "Y\n"; }
+void printZ(){ cout << "Z\n"; }
 int main(){
     while(true){
         cout << "\nEnter your choice : ";
@@ -101,23 +152,15 @@ int main(){
         char ch = inp[0];
         ch = toupper(ch);
         inp.clear();
-        if(ch < 'A' || ch > 'Z') {cout << "\nInavalid Choice"; continue;}
-        switch (ch){
-            case 'A':
-                printA();
-                break;
-            case 'B':
-                printB();
-                break;
-            case 'C':
-                printC();
-                break;
-            case 'D':
-                printD();
-                break;
-            default:
-                break;
-        }
+        vector<void(*)()> funcs = {
+        printA, printB, printC, printD, printE, printF, printG,
+        printH, printI, printJ, printK, printL, printM,
+        printN, printO, printP, printQ, printR, printS, printT,
+        printU, printV, printW, printX, printY, printZ
+        };
+
+        if (ch >= 'A' && ch <= 'Z')
+            funcs[ch - 'A']();
 
         cout << "\nDo you want to continue (Y/N) : ";
         string inp2; cin >> inp2;

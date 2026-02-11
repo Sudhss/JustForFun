@@ -125,7 +125,25 @@ void printF(){
     }
     
 }
-void printG(){ cout << "G\n"; }
+void printG(){
+    int n = 5;
+    //  *****  
+    // *       
+    // *  *****
+    // *      *
+    //  ******
+    for(int i = 0;i<n;i++){
+        if() cout << "*";
+        for(int j = 0;j<n-1;j++){
+            if(j != 0 && i || i != 0 || i != n-1)
+                cout << "*";
+            else cout << "#";
+        }
+        cout << endl;
+    }
+
+
+}
 void printH(){ cout << "H\n"; }
 void printI(){ cout << "I\n"; }
 void printJ(){ cout << "J\n"; }

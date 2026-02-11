@@ -133,9 +133,9 @@ void printG(){
     // *      *
     //  ******
     for(int i = 0;i<n;i++){
-        if() cout << "*";
+        if(i != 0 || i != n-1) cout << "*";
         for(int j = 0;j<n-1;j++){
-            if(j != 0 && i || i != 0 || i != n-1)
+            if(j != 0 && i)
                 cout << "*";
             else cout << "#";
         }

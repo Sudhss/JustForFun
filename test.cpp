@@ -84,6 +84,35 @@ void printD(){
 
 
 
+void printH(){
+    // *    *
+    // *    *
+    // ******
+    // *    *
+    // *    *
+    int n = 11;
+    int mid = n/2;
+    for(int i = 0;i<n;i++){
+        for(int j = 0;j<n+2;j++){
+            if(j == 0 || j == n+1 || i == mid) cout << "*";
+            else cout << " ";
+        }
+        cout << endl;
+    }
+}
+
+void printI(){
+    int n = 5;
+    int mid = n/2;
+    for(int i = 0;i<n;i++){
+        for(int j = 0;j<n;j++){
+            if(i == 0 || i == n-1) cout << "*";
+            else if(j == mid) cout << "*";
+            else cout << " ";
+        }
+        cout << endl;
+    }
+}
 int main(){
-    printD();
+    printI();
 }
